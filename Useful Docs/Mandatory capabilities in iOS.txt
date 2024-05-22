@@ -1,40 +1,50 @@
-Just create a session with an android device
-1. platformName -> android
-2. automationName -> UiAutomator2
+Just create a session with an iOS device
+1. platformName -> iOS
+2. automationName -> XCUITest
+3. udid --> Unique Device Identifier of that device (optional but strongly recommended)
+4. platformVersion --> iOS Version of the device that need to be used (optional)
+5. deviceName --> Exact match (if udid is not provided) of the Simulator Name (optional)
 
-Create a session with an android device and install and launch the app provided
-1. platformName -> android
-2. automationName -> UiAutomator2
-3. app --> application file (*.apk) that needs to be installed
+Create a session with an iOS device and install and launch the app provided
+1. platformName -> iOS
+2. automationName -> XCUITest
+3. app --> application file (*.app / *ipa) that needs to be installed
+4. udid --> Unique Device Identifier of that device (optional but strongly recommended)
+5. platformVersion --> iOS Version of the device that need to be used (optional)
+6. deviceName --> Exact match (if udid is not provided) of the Simulator Name (optional)
 
-Create a session with an android device and launch the app that is already installed
-1. platformName -> android
-2. automationName -> UiAutomator2
-3. appPackage --> Package name or app name provided by the developer for that app
-4. appActivity --> Screen name provided by the developer for that app for that screen (Note: This screen should have the permission to be lauched)
+Create a session with an iOS device and launch the app that is already installed
+1. platformName -> iOS
+2. automationName -> XCUITest
+3. bundleId --> bundle identifier of the application that is installed
+4. udid --> Unique Device Identifier of that device (optional but strongly recommended)
+5. platformVersion --> iOS Version of the device that need to be used (optional)
+6. deviceName --> Exact match (if udid is not provided) of the Simulator Name (optional)
 
-Create a session with an android device and launch the browser
-1. platformName -> android
-2. automationName -> UiAutomator2
-3. browserName --> Chrome
+Create a session with an iOS device and launch the browser
+1. platformName -> iOS
+2. automationName -> XCUITest
+3. browserName --> Safari
+4. udid --> Unique Device Identifier of that device (optional but strongly recommended)
+5. platformVersion --> iOS Version of the device that need to be used (optional)
+6. deviceName --> Exact match (if udid is not provided) of the Simulator Name (optional)
 
 Parallel Execution --> Native App/Hybrid App --> Native View
 1. udid
-2. systemPort
-3. mjpegServerPort
+2. wdaLocalPort
 
 Parallel Execution --> Hybrid App --> Web View
 1. udid
-2. chromedriverPort
+2. wdaLocalPort
+3. webkitDebugProxyPort
 
 Parallel Execution --> Hybrid App --> If we switch between Native and Web View
 1. udid
-2. systemPort
-3. mjpegServerPort
-4. chromedriverPort
+2. wdaLocalPort
+3. webkitDebugProxyPort
 
 Parallel Execution --> Web App --> Web View
 1. udid
-2. mjpegServerPort
-3. chromedriverPort
+2. wdaLocalPort
+3. webkitDebugProxyPort
 
