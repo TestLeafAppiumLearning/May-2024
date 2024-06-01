@@ -16,10 +16,10 @@ public class IosExecutionInSauceLabs {
         caps.setCapability("platformName", "iOS");
         caps.setCapability("appium:app", "storage:filename=UICatalog.zip");  // The filename of the mobile app
         caps.setCapability("appium:deviceName", "iPhone Simulator");
-        caps.setCapability("appium:platformVersion", "17.0");
+        caps.setCapability("appium:platformVersion", "16.2");
         caps.setCapability("appium:automationName", "XCUITest");
         MutableCapabilities sauceOptions = new MutableCapabilities();
-        sauceOptions.setCapability("appiumVersion", "2.1.3");
+        sauceOptions.setCapability("appiumVersion", "2.0.0");
         sauceOptions.setCapability("username", "oauth-appiummay-acf8f");
         sauceOptions.setCapability("accessKey", "693b6ee5-a268-4470-b40e-7c10e66aeaa5");
         sauceOptions.setCapability("build", "<your build id>");

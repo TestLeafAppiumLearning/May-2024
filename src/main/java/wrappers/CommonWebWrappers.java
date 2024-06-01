@@ -55,6 +55,7 @@ public class CommonWebWrappers extends CommonNativeWrappers {
                 dc.setCapability("startIWDP", true);
                 dc.setCapability("nativeWebTap", true);
                 dc.setCapability("automationName", "XCUITest");
+                dc.setCapability("webviewConnectTimeout", "30000");
                 driver = new IOSDriver(new URI("http://0.0.0.0:4723").toURL(), dc);
             }
             driver.get(URL);

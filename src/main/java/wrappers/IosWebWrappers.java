@@ -29,7 +29,7 @@ public class IosWebWrappers extends IosNativeWrappers {
                 "//*[@value='Clear History and Website Data' and @visible='true']");
         click(getWebElement(Locators.XPATH.asString(),
                 "//*[@value='Clear History and Website Data' and @visible='true']"));
-        click(getWebElement(Locators.XPATH.asString(), "//*[@label='Clear' or @label='Clear History and Data']"));
+        click(getWebElement(Locators.XPATH.asString(), "//*[@label='Clear' or contains(@label,'Clear History') or @label='Clear History and Data']"));
         stopRunningApp("com.apple.Preferences");
         switchToAnotherApp("com.apple.mobilesafari");
         switchWebView();
